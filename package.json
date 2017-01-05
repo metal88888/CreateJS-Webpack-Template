@@ -1,7 +1,8 @@
 {
-  "name": "",
+  "name": "CreateJS-Webpack-Template",
   "version": "0.0.1",
   "scripts": {
+    "setup": "`npm bin`/bower install",
     "clean:www": "rm -rf www/*",
     "clean": "npm run clean:www",
     "copy:html": "mkdir -p www/ && cp src/index.html www/",
@@ -17,8 +18,7 @@
   "author": "Naoki Sawada",
   "license": "MIT",
   "dependencies": {
-    "createjs-easeljs": "^0.8.2",
-    "npm": "^4.0.5"
+    "bower": "^1.8.0"
   },
   "devDependencies": {
     "babel": "^6.5.2",
