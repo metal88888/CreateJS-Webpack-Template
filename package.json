@@ -7,7 +7,6 @@
     "clean": "npm run clean:www",
     "copy:html": "mkdir -p www/ && cp src/index.html www/",
     "copy:css": "mkdir -p www/assets/css && cp src/css/reset.min.css www/assets/css/",
-    "copy:img": "mkdir -p www/assets/img && cp -r src/js/p5js/data/* www/assets/img",
     "copy:development": "npm run copy:html && npm run copy:css",
     "build": "npm run clean && npm run copy:development && `npm bin`/webpack",
     "watch:webpack": "`npm bin`/webpack --watch",
