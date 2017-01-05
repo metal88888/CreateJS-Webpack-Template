@@ -1,0 +1,34 @@
+{
+  "name": "",
+  "version": "0.0.1",
+  "scripts": {
+    "clean:www": "rm -rf www/*",
+    "clean": "npm run clean:www",
+    "copy:html": "mkdir -p www/ && cp src/index.html www/",
+    "copy:css": "mkdir -p www/assets/css && cp src/css/reset.min.css www/assets/css/",
+    "copy:img": "mkdir -p www/assets/img && cp -r src/js/p5js/data/* www/assets/img",
+    "copy:development": "npm run copy:html && npm run copy:css",
+    "build": "npm run clean && npm run copy:development && `npm bin`/webpack",
+    "watch:webpack": "`npm bin`/webpack --watch",
+    "watch:browser": "`npm bin`/browser-sync start --config bs-config.js",
+    "watch": "npm run watch:webpack & npm run watch:browser",
+    "start": "npm run build && npm run watch"
+  },
+  "author": "Naoki Sawada",
+  "license": "MIT",
+  "dependencies": {
+    "createjs-easeljs": "^0.8.2",
+    "npm": "^4.0.5"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "browser-sync": "^2.18.5",
+    "exports-loader": "^0.6.3",
+    "imports-loader": "^0.7.0",
+    "webpack": "^1.14.0"
+  }
+}
